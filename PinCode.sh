@@ -1,11 +1,10 @@
 #!/bin/bash -x
+echo "Restricting pin code taking alphabets or special characters at beginning"
 
-echo "Welcome to Patterns PIN code"
-
-##UserCase1
+##UserCase2
 read -p "Enter pincode " Pin
 
-Pattern="[0-9]{6}"
+Pattern="^[0-9]{6}"
 
 if [[ $Pin =~ $Pattern ]]
 then
@@ -13,4 +12,3 @@ then
 else
                 echo "Ïnvalid"
 fi
-
