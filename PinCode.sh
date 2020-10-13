@@ -1,11 +1,11 @@
 #!/bin/bash -x
 
-echo "Welcome to Patterns PIN code"
+echo "Validing space in the middle of the pincode"
 
-##UserCase1
+##UserCase4
 read -p "Enter pincode " Pin
 
-Pattern="[0-9]{6}"
+Pattern="^[0-9]{3}[[:space:]]*[0-9]{3}$"
 
 if [[ $Pin =~ $Pattern ]]
 then
