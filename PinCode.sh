@@ -1,6 +1,43 @@
 #!/bin/bash -x
 
-echo "Validing space in the middle of the pincode"
+echo "Welcome to Patterns PIN code"
+
+##UserCase1
+read -p "Enter pincode " Pin
+
+Pattern="[0-9]{6}"
+
+if [[ $Pin =~ $Pattern ]]
+then
+                echo "Valid"
+else
+                echo "Invalid"
+fi
+
+##UserCase2
+read -p "Enter pincode " Pin
+
+Pattern="^[0-9]{6}"
+
+if [[ $Pin =~ $Pattern ]]
+then
+                echo "Valid"
+else
+                echo "Invalid"
+fi
+
+##UserCase3
+read -p "Enter pincode " Pin
+
+Pattern="^[0-9]{6}$"
+
+if [[ $Pin =~ $Pattern ]]
+then
+                echo "Valid"
+else
+                echo "Invalid"
+fi
+
 
 ##UserCase4
 read -p "Enter pincode " Pin
@@ -11,6 +48,6 @@ if [[ $Pin =~ $Pattern ]]
 then
                 echo "Valid"
 else
-                echo "Ïnvalid"
+                echo "Invalid"
 fi
 
